@@ -45,7 +45,7 @@
 
 <!-- Header 13 -->
 
-<header class="pt-190 pb-130 header_13">
+<header class="pt-190 pb-130 header_13" style="background-image: url(<%= dato.hero.featured_image.file.fit('crop').width(1900).height(1000).format('pjpg').to_url %>)">
 
 	<!-- Header Menu 13 -->
 
@@ -55,15 +55,7 @@
 				<div class="col-xl-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
 					<div class="row justify-content-between align-items-center">
 						<div class="col-xl-2 color-white logo">Montagnola da vivere</div>
-						<div class="col-xl-8 text-center f-18 medium">
-<!-- 							<a href="#" class="link color-white mx-15">Tour</a>
-							<a href="#" class="link color-white mx-15">Features</a>
-							<a href="#" class="link color-white mx-15">Pricing</a>
-							<a href="#" class="link color-white mx-15">Blog</a>
- --><!-- 							<a href="#" class="link color-white mx-15"><i class="fab fa-dribbble"></i></a>
-							<a href="#" class="link color-white mx-15"><i class="fab fa-instagram"></i></a>
-							<a href="#" class="link color-white mx-15"><i class="fab fa-behance"></i></a>
- -->						</div>
+						<div class="col-xl-8 text-center f-18 medium"></div>
 						<div class="col-xl-2 text-right">
 							<a href="#" class="btn sm action-2 f-16">Newsletter</a>
 						</div>
@@ -77,11 +69,11 @@
 		<div class="mb-3 logo d-block d-xl-none color-white logo_mobile">Montagnola da vivere</div>
 		<div class="row justify-content-center">
 			<div class="col-lg-7" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<h1 class="big">Il giardino in movimento</h1>
+				<h1 class="big"><%= dato.hero.title %></h1>
 			</div>
 			<div class="col-lg-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
 				<div class="mt-30 f-22 text-adaptive">
-					Progetto di riqualificazione del giardino della Montagnola, nel quartiere 4 di Firenze.
+					<%= dato.hero.subtitle %>
 				</div>
 			</div>
 		</div>
@@ -96,10 +88,10 @@
 			<div class="col-xl-1"></div>
 			<div class="col-xl-7 col-lg-8">
 				<h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-					Cosa è questo progetto?
+					<%= dato.about.title %>
 				</h2>
 				<div class="mt-25 mb-30 f-22 op-7 color-heading text-adaptive description" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-					Il progetto vuole promuovere la frequentazione della Montagnola da parte dei cittadini
+					<%= dato.about.abstract %>
 				</div>
 			</div>
 		</div>
@@ -108,14 +100,16 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-8 text-md-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
 				<img srcset="i/feature_33_img@2x.png 2x" src="i/feature_33_img.png" class="img-fluid img" alt="" />
 			</div>
+
 			<div class="col-xl-4 col-lg-5 col-md-6 col-sm-8">
-				<div class="mt-55 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-					<div class="mb-20 f-14 semibold text-uppercase sp-20 title">Area giochi</div>
-					<div class="color-heading op-7 text-adaptive">
-						A child was brought in, who had <br />
-						swallowed a necklace o towards made.
+				<%- dato.about.paragraph_block.each do |p| %>
+					<div class="mt-55 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+						<div class="mb-20 f-14 semibold text-uppercase sp-20 title"><%= p.title %></div>
+						<div class="color-heading op-7 text-adaptive">
+							<%= p.description %>
+						</div>
 					</div>
-				</div>
+				<%- end %>
 				<div class="mt-55 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
 					<div class="mb-20 f-14 semibold text-uppercase sp-20 title">Cinema all'aperto ed eventi</div>
 					<div class="color-heading op-7 text-adaptive">
