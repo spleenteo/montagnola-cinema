@@ -4,6 +4,8 @@ activate :directory_indexes
 activate :dato
 activate :pagination
 
+activate :i18n,:mount_at_root => :it
+
 activate :external_pipeline,
   name: :webpack,
   command: build? ? "npm run build:assets" : "npm run start:assets",

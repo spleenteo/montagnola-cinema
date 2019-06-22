@@ -15,7 +15,7 @@
 	<body>
 <!-- Navigation Mobile type 1 -->
 
-<a href="#" class="open_menu bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
+<!-- <a href="#" class="open_menu bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
 <div class="navigation_mobile bg-dark type1">
 	<a href="#" class="close_menu color-white"><i class="fas fa-times"></i></a>
 	<div class="px-40 pt-60 pb-60 inner">
@@ -42,7 +42,7 @@
 		<div class="mt-50 f-14 light color-white op-3 copy">&copy; 2018 Designmodo. All rights reserved.</div>
 	</div>
 </div>
-
+ -->
 <!-- Header 13 -->
 
 <header class="pt-190 pb-130 header_13" style="background-image: url(<%= dato.hero.featured_image.file.fit('crop').width(1900).height(1000).format('pjpg').to_url %>)">
@@ -110,21 +110,6 @@
 						</div>
 					</div>
 				<%- end %>
-				<div class="mt-55 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-					<div class="mb-20 f-14 semibold text-uppercase sp-20 title">Cinema all'aperto ed eventi</div>
-					<div class="color-heading op-7 text-adaptive">
-						They made signs for me to come down <br />
-						from the rock, and go towards the shore.
-					</div>
-				</div>
-				<div class="mt-55 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-					<div class="mb-20 f-14 semibold text-uppercase sp-20 title">Percorso educativo al "verde"</div>
-					<div class="color-heading op-7 text-adaptive">
-						They made signs for me to come down <br />
-						from the rock, and go towards the shore, <br />
-						which that as dedications have.
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -139,12 +124,9 @@
 				<div class="pt-55 pb-50 bg-light radius10 text-center inner">
 					<div class="row justify-content-center">
 						<div class="col-xl-10 col-lg-11 col-md-10 col-11">
-							<h2 class="mb-15 small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">Un quartiere da vivere</h2>
+							<h2 class="mb-15 small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.about.highlight_title %></h2>
 							<div class="f-22 color-heading text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-								The most important part of the Startup Framework <br />
-								are the samples or Bootstrap themes and templates. <br />
-								The samples consist of a set of few pages you can <br />
-								use «as is» or add new blocks from UI Kit.
+								<%= dato.about.highlight_body %>
 							</div>
 						</div>
 					</div>
@@ -160,78 +142,33 @@
 	<div class="container px-xl-0">
 		<div class="row justify-content-center">
 			<div class="col-xl-8 col-lg-10">
-				<h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">Programma</h2>
+				<h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.events_page.title %></h2>
 				<div class="mt-15 mb-60 f-22 color-heading text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-					The most important part of the Startup Framework is the samples. <br />
-					The samples form a set of 20 usable pages you can use as is or you
-					can add new blocks from UI Kit.
+					<%= dato.events_page.abstract %>
 				</div>
 			</div>
 		</div>
-		<div class="row align-items-stretch text-sm-left">
-			<div class="mb-30 col-md-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<a href="#"><img srcset="i/showcase_9_img_1@2x.jpg 2x" src="i/showcase_9_img_1.jpg" class="w-full radius10 noradius_bottom" alt="" /></a>
-				<div class="w-full pb-30 px-35 radius10 noradius_top block">
-					<a href="#" class="mt-25 mb-10 f-22 link color-main">I Goonies</a>
-					<div class="color-heading text-adaptive">
-						Film cult degli anni 80. 5 ragazzi scoprono un tesoro nascosto
-					</div>
-					<div class="mt-15 f-14 semibold text-uppercase sp-20 action-2 tags">
-						<a href="#" class="link action-2">Mercoledì 26 Giugno</a>,
-						<a href="#" class="link action-2">ore 21:15</a>
-						<a href="#" class="link action-2"> — Cinema</a>
-					</div>
-				</div>
-			</div>
-			<div class="mb-30 col-md-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-				<a href="#"><img srcset="i/showcase_9_img_2@2x.jpg 2x" src="i/showcase_9_img_2.jpg" class="w-full radius10 noradius_bottom" alt="" /></a>
-				<div class="w-full pb-30 px-35 radius10 noradius_top block">
-					<a href="#" class="mt-25 mb-10 f-22 link color-main">Slides</a>
-					<div class="color-heading text-adaptive">
-						We have created a new product that will help designers <br />
-						create websites for their startups.
-					</div>
-					<div class="mt-15 f-14 semibold text-uppercase sp-20 action-2 tags">
-						<a href="#" class="link action-2">Ui kit</a>,
-						<a href="#" class="link action-2">Colorful</a>,
-						<a href="#" class="link action-2">Landing page</a>,
-						<a href="#" class="link action-2">Slide</a>
+
+		<%- dato.events.each do |event| %>
+			<div class="row align-items-stretch text-sm-left">
+				<div class="mb-30 col-md-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+					<a href="#">
+						<img style="max-width: 100%" src="<%= event.featured_image.file.fit('crop').width(600).height(400).format('pjpg').to_url %> class="w-full radius10 noradius_bottom" alt="" />
+					</a>
+					<div class="w-full pb-30 px-35 radius10 noradius_top block">
+						<a href="#" class="mt-25 mb-10 f-22 link color-main"><%= event.title %></a>
+						<div class="color-heading text-adaptive">
+							<%= event.description %>
+						</div>
+						<div class="mt-15 f-14 semibold text-uppercase sp-20 action-2 tags">
+							<a href="#" class="link action-2"><%= I18n.l(event.data, format: '%A, %e %B %Y') %></a>,
+							<a href="#" class="link action-2"><%= I18n.l(event.data, format: '%H:%M') %></a>
+							<a href="#" class="link action-2"> — <%= event.category %></a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="mb-30 m-md-0 col-md-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<a href="#"><img srcset="i/showcase_9_img_3@2x.jpg 2x" src="i/showcase_9_img_3.jpg" class="w-full radius10 noradius_bottom" alt="" /></a>
-				<div class="w-full pb-30 px-35 radius10 noradius_top block">
-					<a href="#" class="mt-25 mb-10 f-22 link color-main">Flat UI Pro</a>
-					<div class="color-heading text-adaptive">
-						Components and blocks are fixed to the common and <br />
-						popular 12 Grid system.
-					</div>
-					<div class="mt-15 f-14 semibold text-uppercase sp-20 action-2 tags">
-						<a href="#" class="link action-2">Ui kit</a>,
-						<a href="#" class="link action-2">Ux kit</a>,
-						<a href="#" class="link action-2">design</a>,
-						<a href="#" class="link action-2">flat</a>,
-						<a href="#" class="link action-2">web</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-				<a href="#"><img srcset="i/showcase_9_img_4@2x.jpg 2x" src="i/showcase_9_img_4.jpg" class="w-full radius10 noradius_bottom" alt="" /></a>
-				<div class="w-full pb-30 px-35 radius10 noradius_top block">
-					<a href="#" class="mt-25 mb-10 f-22 link color-main">Slides</a>
-					<div class="color-heading text-adaptive">
-						We have created a new product that will help designers <br />
-						create websites for their startups.
-					</div>
-					<div class="mt-15 f-14 semibold text-uppercase sp-20 action-2 tags">
-						<a href="#" class="link action-2">Ui kit</a>,
-						<a href="#" class="link action-2">Colorful</a>,
-						<a href="#" class="link action-2">Landing page</a>,
-						<a href="#" class="link action-2">Slide</a>
-					</div>
-				</div>
-			</div>
+			<% end %>
+
 		</div>
 	</div>
 </section>
