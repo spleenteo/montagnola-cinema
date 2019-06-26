@@ -57,7 +57,7 @@
 						<div class="col-xl-2 color-white logo">Montagnola da vivere</div>
 						<div class="col-xl-8 text-center f-18 medium"></div>
 						<div class="col-xl-2 text-right">
-							<a href="#" class="btn sm action-2 f-16">Newsletter</a>
+							<a href="https://tinyletter.com/comitatogim" target="_blank" class="btn sm action-2 f-16">Newsletter</a>
 						</div>
 					</div>
 				</div>
@@ -221,9 +221,9 @@
 		<div class="row justify-content-center text-center">
 			<div class="col-lg-8">
 				<div class="row align-items-center justify-content-center no-gutters">
-					<%- dato.partners.each do |p| %>
-						<div class="col-sm-3 col-6 mb-35 holder" data-aos-duration="500" data-aos="fade-down" data-aos-delay="150">
-							<img src="<%= p.logo.file.fit('clip').width(300).height(200).sat(-100).bri(50).format('pjpg').to_url %>" class="img-fluid" alt="" />
+					<%- dato.partners.sort_by(&:position).each do |p| %>
+						<div class="col-sm-3 col-6 mb-35 mr-35 holder" data-aos-duration="500" data-aos="fade-down" data-aos-delay="150">
+							<img src="<%= p.logo.file.fit('clip').width(300).height(200).sat(-100).bri(0).format('pjpg').to_url %>" class="img-fluid" alt="" />
 						</div>
 					<% end %>
 				</div>
