@@ -1,279 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" >
-		<title>Montagnola da vivere Firenze | Estate Cinema</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-				<link rel="icon" href="i/favicon.png" type="image/x-icon">
-				<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,500,700,800,900|Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">
-				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-					<link href="css/style.css" rel="stylesheet" />
-				<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
-			</head>
-	<body>
-<!-- Navigation Mobile type 1 -->
+  <head>
+    <meta charset="utf-8" >
+    <title>Montagnola da vivere | Estate Cinema Firenze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="i/favicon.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,500,700,800,900|Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+          <link href="css/style.css" rel="stylesheet" />
+        <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
+  </head>
+  <body>
 
-<!-- <a href="#" class="open_menu bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
-<div class="navigation_mobile bg-dark type1">
-	<a href="#" class="close_menu color-white"><i class="fas fa-times"></i></a>
-	<div class="px-40 pt-60 pb-60 inner">
-		<div class="logo color-white mb-30">Montagnola da vivere</div>
-		<div><a href="#" class="f-heading f-22 link color-white mb-20">Home</a></div>
-		<div><a href="#" class="f-heading f-22 link color-white mb-20">Tour</a></div>
-		<div><a href="#" class="f-heading f-22 link color-white mb-20">Mobile Apps</a></div>
-		<div><a href="#" class="f-heading f-22 link color-white mb-20">Pricing</a></div>
-		<div><a href="#" class="f-heading f-22 link color-white mb-40">Development</a></div>
+    <header class="pt-190 pb-130 header_13" style="background-image: url(<%= dato.hero.featured_image.file.fit('crop').width(1900).height(1000).format('pjpg').to_url %>)">
 
-		<div><a href="#" class="link color-white op-3 mb-15">Help</a></div>
-		<div><a href="#" class="link color-white op-3 mb-15">F.A.Q.</a></div>
-		<div><a href="#" class="link color-white op-3 mb-15">Support</a></div>
-		<div><a href="#" class="link color-white op-3 mb-15">About Us</a></div>
-		<div><a href="#" class="link color-white op-3 mb-15">Blog</a></div>
-		<div><a href="#" class="link color-white op-3 mb-15">Careers</a></div>
+      <!-- Header Menu 13 -->
 
-		<div class="socials mt-40">
-			<a href="#" target="_blank" class="link color-white f-18 mr-20"><i class="fab fa-twitter"></i></a>
-			<a href="#" target="_blank" class="link color-white f-18 mr-20"><i class="fab fa-facebook"></i></a>
-			<a href="#" target="_blank" class="link color-white f-18 mr-20"><i class="fab fa-google-plus-g"></i></a>
-		</div>
+      <nav class="header_menu_13 pt-30 pb-30 mt-25">
+        <div class="container px-xl-0">
+          <div class="row justify-content-center">
+            <div class="col-xl-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-xl-2 color-white logo">Montagnola da vivere</div>
+                <div class="col-xl-8 text-center f-18 medium"></div>
+                <div class="col-xl-2 text-right">
+                  <a href="https://tinyletter.com/comitatogim" target="_blank" class="btn sm action-2 f-16">Newsletter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-		<div class="mt-50 f-14 light color-white op-3 copy">&copy; 2018 Designmodo. All rights reserved.</div>
-	</div>
-</div>
- -->
-<!-- Header 13 -->
+      <div class="container px-xl-0 text-center color-white">
+        <div class="mb-3 logo d-block d-xl-none color-white logo_mobile">Montagnola da vivere</div>
+        <div class="row justify-content-center">
+          <div class="col-lg-7" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+            <h1 class="big"><%= dato.hero.title %></h1>
+          </div>
+          <div class="col-lg-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+            <div class="mt-30 f-22 text-adaptive">
+              <%= dato.hero.subtitle %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<header class="pt-190 pb-130 header_13" style="background-image: url(<%= dato.hero.featured_image.file.fit('crop').width(1900).height(1000).format('pjpg').to_url %>)">
+    <!-- Feature 33 -->
 
-	<!-- Header Menu 13 -->
+    <section class="feature_33 bg-light pt-105 pb-130">
+      <div class="container px-xl-0">
+        <div class="row">
+          <div class="col-xl-1"></div>
+          <div class="col-xl-7 col-lg-8">
+            <h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+              <%= dato.about.title %>
+            </h2>
+            <div class="mt-25 mb-30 f-22 op-7 color-heading text-adaptive description" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+              <%= dato.about.abstract %>
+            </div>
+          </div>
+        </div>
+        <div class="row flex-md-row-reverse align-items-end">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-8 text-md-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
+            <img srcset="i/feature_33_img@2x.png 2x" src="i/feature_33_img.png" class="img-fluid img" alt="" />
+          </div>
 
-	<nav class="header_menu_13 pt-30 pb-30 mt-25">
-		<div class="container px-xl-0">
-			<div class="row justify-content-center">
-				<div class="col-xl-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
-					<div class="row justify-content-between align-items-center">
-						<div class="col-xl-2 color-white logo">Montagnola da vivere</div>
-						<div class="col-xl-8 text-center f-18 medium"></div>
-						<div class="col-xl-2 text-right">
-							<a href="https://tinyletter.com/comitatogim" target="_blank" class="btn sm action-2 f-16">Newsletter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8">
+            <%- dato.about.paragraph_block.each do |p| %>
+              <div class="mt-55 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+                <div class="mb-20 f-14 semibold text-uppercase sp-20 title"><%= p.title %></div>
+                <div class="color-heading op-7 text-adaptive">
+                  <%= p.description %>
+                </div>
+              </div>
+            <%- end %>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<div class="container px-xl-0 text-center color-white">
-		<div class="mb-3 logo d-block d-xl-none color-white logo_mobile">Montagnola da vivere</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-7" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<h1 class="big"><%= dato.hero.title %></h1>
-			</div>
-			<div class="col-lg-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-				<div class="mt-30 f-22 text-adaptive">
-					<%= dato.hero.subtitle %>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
+    <!-- Content 14 -->
 
-<!-- Feature 33 -->
+    <section class="content_14 pt-100 pb-100">
+      <div class="container px-xl-0">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-9 col-md-10">
+            <div class="pt-55 pb-50 bg-light radius10 text-center inner">
+              <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-11 col-md-10 col-11">
+                  <h2 class="mb-15 small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.about.highlight_title %></h2>
+                  <div class="f-22 color-heading text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+                    <%= dato.about.highlight_body %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="feature_33 bg-light pt-105 pb-130">
-	<div class="container px-xl-0">
-		<div class="row">
-			<div class="col-xl-1"></div>
-			<div class="col-xl-7 col-lg-8">
-				<h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-					<%= dato.about.title %>
-				</h2>
-				<div class="mt-25 mb-30 f-22 op-7 color-heading text-adaptive description" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-					<%= dato.about.abstract %>
-				</div>
-			</div>
-		</div>
-		<div class="row flex-md-row-reverse align-items-end">
-			<div class="col-lg-1"></div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-8 text-md-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
-				<img srcset="i/feature_33_img@2x.png 2x" src="i/feature_33_img.png" class="img-fluid img" alt="" />
-			</div>
+    <!-- Showcase 9 -->
 
-			<div class="col-xl-4 col-lg-5 col-md-6 col-sm-8">
-				<%- dato.about.paragraph_block.each do |p| %>
-					<div class="mt-55 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-						<div class="mb-20 f-14 semibold text-uppercase sp-20 title"><%= p.title %></div>
-						<div class="color-heading op-7 text-adaptive">
-							<%= p.description %>
-						</div>
-					</div>
-				<%- end %>
-			</div>
-		</div>
-	</div>
-</section>
+    <section class="showcase_9 bg-light pt-105 pb-90 text-center">
+      <div class="container px-xl-0">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-10">
+            <h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.events_page.title %></h2>
+            <div class="mt-15 mb-60 f-22 color-heading text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+              <%= dato.events_page.abstract %>
+            </div>
+          </div>
+        </div>
 
-<!-- Content 14 -->
+        <div class="row align-items-stretch_ text-sm-left">
+          <%- dato.events.sort_by(&:data).each do |event| %>
+            <div class="mb-30 col-md-4" data-aos-duration="200" data-aos="fade-down" data-aos-delay="0">
+              <img style="" src="<%= event.featured_image.file.fit('crop').width(300).height(200).format('pjpg').to_url %>" class="w-full radius10 noradius_bottom" alt="" />
+              <div class="w-full pb-30 px-35 radius10 noradius_top block">
+                <a href="#" class="mt-25 mb-10 f-22 link color-main"><%= event.title %></a>
+                <div class="color-heading text-adaptive">
+                  <%= event.description %>
+                </div>
+                <div class="mt-15 f-14 semibold text-uppercase action-2 tags">
+                  <a href="#" class="link action-2"><%= event.category %></a>
+                </div>
+                <div class="mt-1 f-14 semibold text-uppercase sp-20 action-2 tags">
+                  <a href="#" class="link action-2"><%= I18n.l(event.data, format: '%A, %e %B') %></a>,
+                  <a href="#" class="link action-2"><%= I18n.l(event.data, format: '%H:%M') %></a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
 
-<section class="content_14 pt-100 pb-100">
-	<div class="container px-xl-0">
-		<div class="row justify-content-center">
-			<div class="col-xl-8 col-lg-9 col-md-10">
-				<div class="pt-55 pb-50 bg-light radius10 text-center inner">
-					<div class="row justify-content-center">
-						<div class="col-xl-10 col-lg-11 col-md-10 col-11">
-							<h2 class="mb-15 small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.about.highlight_title %></h2>
-							<div class="f-22 color-heading text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-								<%= dato.about.highlight_body %>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+        </div>
+      </div>
+    </section>
 
-<!-- Showcase 9 -->
+    <!-- Contact 10 -->
 
-<section class="showcase_9 bg-light pt-105 pb-90 text-center">
-	<div class="container px-xl-0">
-		<div class="row justify-content-center">
-			<div class="col-xl-8 col-lg-10">
-				<h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.events_page.title %></h2>
-				<div class="mt-15 mb-60 f-22 color-heading text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-					<%= dato.events_page.abstract %>
-				</div>
-			</div>
-		</div>
+    <section class="contact_10 bg-light pt-100 pb-80 text-center">
+      <div class="container px-xl-0">
+        <img srcset="i/contact_10_logo@2x.png 2x" src="i/contact_10_logo.png" class="logo radius30" alt="" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0" />
+        <h2 class="mt-75 mb-140" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">Per maggiori informazioni:
+          <div>
+            <a href="mailto:info@designmodo.com" class="mt-10 link action-2">montagnoladavivere@gmail.com</a>
+          </div>
+          <div>
+            <a href="https://tinyletter.com/comitatogim" target="_blank" class="btn large mt-60 sm action-2 f-16">Iscriviti alla newsletter</a>
 
-		<div class="row align-items-stretch_ text-sm-left">
-			<%- dato.events.sort_by(&:data).each do |event| %>
-				<div class="mb-30 col-md-4" data-aos-duration="200" data-aos="fade-down" data-aos-delay="0">
-					<img style="" src="<%= event.featured_image.file.fit('crop').width(300).height(200).format('pjpg').to_url %>" class="w-full radius10 noradius_bottom" alt="" />
-					<div class="w-full pb-30 px-35 radius10 noradius_top block">
-						<a href="#" class="mt-25 mb-10 f-22 link color-main"><%= event.title %></a>
-						<div class="color-heading text-adaptive">
-							<%= event.description %>
-						</div>
-						<div class="mt-15 f-14 semibold text-uppercase action-2 tags">
-							<a href="#" class="link action-2"><%= event.category %></a>
-						</div>
-						<div class="mt-1 f-14 semibold text-uppercase sp-20 action-2 tags">
-							<a href="#" class="link action-2"><%= I18n.l(event.data, format: '%A, %e %B') %></a>,
-							<a href="#" class="link action-2"><%= I18n.l(event.data, format: '%H:%M') %></a>
-						</div>
-					</div>
-				</div>
-			<% end %>
-		</div>
+          </div>
+        </h2>
+    <!--    <div class="socials" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+          <a href="#" target="_blank" class="mb-20 f-22 link color-gray mx-30"><i class="fab fa-facebook-square"></i></a>
+        </div>
+     -->  </div>
+    </section>
 
-		</div>
-	</div>
-</section>
+    <!-- Content 19 -->
 
-<!-- Contact 10 -->
+    <section class="content_19 bg-light pt-105 pb-90">
+      <div class="container px-xl-0">
+        <div class="row justify-content-center">
+          <div class="col-xl-10 col-lg-11">
+            <h2 class="small text-left text-lg-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.project_page.title %></h2>
+            <div class="row justify-content-center justify-content-lg-between">
 
-<section class="contact_10 bg-light pt-100 pb-80 text-center">
-	<div class="container px-xl-0">
-		<img srcset="i/contact_10_logo@2x.png 2x" src="i/contact_10_logo.png" class="logo radius30" alt="" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0" />
-		<h2 class="mt-75 mb-140" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">Per maggiori informazioni:
-			<div>
-				<a href="mailto:info@designmodo.com" class="mt-10 link action-2">montagnoladavivere@gmail.com</a>
-			</div>
-		</h2>
-<!-- 		<div class="socials" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
-			<a href="#" target="_blank" class="mb-20 f-22 link color-gray mx-30"><i class="fab fa-facebook-square"></i></a>
-		</div>
- -->	</div>
-</section>
+              <%- dato.project_page.paragraph_block.each do |p| %>
+                <div class="col-lg-6 mt-45 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+                  <div class="f-heading medium f-18 title"><%= p.title %></div>
+                  <div class="mt-10 color-heading text-adaptive">
+                    <%= p.description %>
+                  </div>
+                </div>
+              <% end %>
 
-<!-- Content 19 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="content_19 bg-light pt-105 pb-90">
-	<div class="container px-xl-0">
-		<div class="row justify-content-center">
-			<div class="col-xl-10 col-lg-11">
-				<h2 class="small text-left text-lg-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><%= dato.project_page.title %></h2>
-				<div class="row justify-content-center justify-content-lg-between">
+    <!-- Content 29 -->
 
-					<%- dato.project_page.paragraph_block.each do |p| %>
-						<div class="col-lg-6 mt-45 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-							<div class="f-heading medium f-18 title"><%= p.title %></div>
-							<div class="mt-10 color-heading text-adaptive">
-								<%= p.description %>
-							</div>
-						</div>
-					<% end %>
+    <section class="content_29 bg-light pt-80 pb-45">
+      <div class="container px-xl-0">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <div class="row align-items-center justify-content-center no-gutters">
+              <%- dato.partners.sort_by(&:position).each do |p| %>
+                <div class="col-sm-3 col-6 mb-35 mr-35 holder" data-aos-duration="500" data-aos="fade-down" data-aos-delay="150">
+                  <img src="<%= p.logo.file.fit('clip').width(300).height(200).sat(-100).bri(0).format('pjpg').to_url %>" class="img-fluid" alt="" />
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+    <!-- Footer 11 -->
 
-<!-- Content 29 -->
-
-<section class="content_29 bg-light pt-80 pb-45">
-	<div class="container px-xl-0">
-		<div class="row justify-content-center text-center">
-			<div class="col-lg-8">
-				<div class="row align-items-center justify-content-center no-gutters">
-					<%- dato.partners.sort_by(&:position).each do |p| %>
-						<div class="col-sm-3 col-6 mb-35 mr-35 holder" data-aos-duration="500" data-aos="fade-down" data-aos-delay="150">
-							<img src="<%= p.logo.file.fit('clip').width(300).height(200).sat(-100).bri(0).format('pjpg').to_url %>" class="img-fluid" alt="" />
-						</div>
-					<% end %>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Footer 11 -->
-
-<footer class="footer_11 bg-dark pt-45 pb-45 color-white text-center">
-	<div class="container px-xl-0">
-		<div class="row align-items-center">
-			<div class="mb-20 mb-lg-0 col-lg-3" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<a href="#" class="logo link color-white">Montagnola da vivere</a>
-			</div>
-			<div class="col-lg-9 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-<!-- 				<a href="#" class="link color-white mr-10">Privacy Policy</a>
-				<a href="#" class="link color-white mx-10">Terms</a>
- -->
- 				<!-- <div class="d-inline-block socials">
-					<a href="#" class="link color-white mx-10"><i class="fab fa-twitter"></i></a>
-					<a href="#" class="link color-white mx-10"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="link color-white ml-10"><i class="fab fa-google-plus-g"></i></a>
-				</div> -->
-			</div>
-		</div>
-		<div data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
-			<div class="mt-45 mb-45 hr h-2 bg-white op-3"></div>
-		</div>
-		<div class="row">
-			<div class="mb-20 mb-lg-0 col-lg-7" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<a href="https://lacittabambina.wordpress.com" class="link color-white mx-10"  target="_blank">La Città Bambina</a>
-				<a href="http://www.genitoriinmovimento.it" target="_blank" class="link color-white mr-10">Comitato Genitori</a>
-				<a href="https://www.fondazionecrfirenze.it/iniziative/paesaggi-comuni/" class="link color-white mr-10" target="_blank" >Bando Paesaggi Comuni</a>
-			</div>
-			<div class="col-lg-5 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-				<div class="text-adaptive">
-					&copy; 2019 Montagnola da Vivere. Creative Commons ©
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+    <footer class="footer_11 bg-dark pt-45 pb-45 color-white text-center">
+      <div class="container px-xl-0">
+        <div class="row align-items-center">
+          <div class="mb-20 mb-lg-0 col-lg-3" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+            <a href="#" class="logo link color-white">Montagnola da vivere</a>
+          </div>
+        </div>
+        <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+          <div class="mt-45 mb-45 hr h-2 bg-white op-3"></div>
+        </div>
+        <div class="row">
+          <div class="mb-20 mb-lg-0 col-lg-7" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+            <a href="https://lacittabambina.wordpress.com" class="link color-white mx-10"  target="_blank">La Città Bambina</a>
+            <a href="http://www.genitoriinmovimento.it" target="_blank" class="link color-white mr-10">Comitato Genitori</a>
+            <a href="https://www.fondazionecrfirenze.it/iniziative/paesaggi-comuni/" class="link color-white mr-10" target="_blank" >Bando Paesaggi Comuni</a>
+          </div>
+          <div class="col-lg-5 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+            <div class="text-adaptive">
+              &copy; 2019 Montagnola da Vivere. Creative Commons ©
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
-<script src="js/slick.min.js"></script>
-<script src="js/aos.min.js"></script>
-<script src="js/jquery.maskedinput.min.js"></script>
-<script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
 
-</body>
+  </body>
 </html>
