@@ -123,16 +123,16 @@
             <div class="mb-30 col-md-4" data-aos-duration="200" data-aos="fade-down" data-aos-delay="0">
               <img style="" src="<%= event.featured_image.file.fit('crop').width(300).height(200).format('pjpg').to_url %>" class="w-full radius10 noradius_bottom" alt="" />
               <div class="w-full pb-30 px-35 radius10 noradius_top block">
-                <a href="#" class="mt-25 mb-10 f-22 link color-main"><%= event.title %></a>
+                <h3 class="mt-25 mb-10 f-22 link color-main"><%= event.title %></h3>
                 <div class="color-heading text-adaptive">
                   <%= event.description %>
                 </div>
                 <div class="mt-15 f-14 semibold text-uppercase action-2 tags">
-                  <a href="#" class="link action-2"><%= event.category %></a>
+                  <p href="#" class="link action-2"><%= event.category %></p>
                 </div>
                 <div class="mt-1 f-14 semibold text-uppercase sp-20 action-2 tags">
-                  <a href="#" class="link action-2"><%= I18n.l(event.data, format: '%A, %e %B') %></a>,
-                  <a href="#" class="link action-2"><%= I18n.l(event.data, format: '%H:%M') %></a>
+                  <p href="#" class="link action-2"><%= I18n.l(event.data, format: '%A, %e %B') %></p>,
+                  <p href="#" class="link action-2"><%= I18n.l(event.data, format: '%H:%M') %></p>
                 </div>
               </div>
             </div>
